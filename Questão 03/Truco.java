@@ -15,10 +15,16 @@ Para sua referência, segue o método `jogar()`,
 que implementa a lógica básica do início do jogo:
 */
 public class Truco {
-
-    private void imprimeMesa() {
-        System.out.println("Apenas um placeholder para a impressão de mesa.");
-        System.out.println("Você não precisa implementar esse método.");
+    private Jogador jogador1;
+	private Jogador jogador2;
+    private Carta cartaVirada;
+    private Baralho baralho;
+    
+    public Truco() {
+        this.jogador1 = new Jogador();
+    	this.jogador2 = new Jogador();
+        this.cartaVirada = new Carta();
+        this.baralho = new Baralho();
     }
 
     public void jogar() {
@@ -26,5 +32,28 @@ public class Truco {
         distribuiMaos();
         inicializaManilha();
         imprimeMesa();
-    }    
+    }
+
+    private void imprimeMesa() {
+        System.out.println("Apenas um placeholder para a impressão de mesa.");
+        System.out.println("Você não precisa implementar esse método.");
+    }
+
+    private void embaralhaCartas() {
+        this.baralho.embaralhar();
+	}
+
+    private void distribuiMaos() {
+        int i = 0;
+        while(i < 3) {
+            this.jogador1.recebeCarta(new Carta());
+            this.jogador2.recebeCarta(new Carta());
+        }
+    }
+
+	private void inicializaManilha() {
+		this.cartaVirada = new Carta();
+	}
+
+
 }

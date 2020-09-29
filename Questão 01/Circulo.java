@@ -15,11 +15,13 @@ public class Circulo
 
     /* (a)
     Adicione à classe um _construtor_ que permita criar um `Circulo` com 
-    dois marâmetros: um `double` para o `raio` e um `String` para `cor`. 
+    dois parâmetros: um `double` para o `raio` e um `String` para `cor`.
     Use a assinatura abaixo como base:
     */
     public Circulo(double raio, String cor) {
         // escreva aqui sua resposta
+        this.raio = raio;
+        this.cor = cor;
     }
 
     // Métodos de acesso
@@ -35,5 +37,5 @@ public class Circulo
         return "Circulo [raio=" + raio + ", cor=" + cor + "]";
     }
     // O que a palavra `@Override` indica? Por que ela foi colocada neste método da classe?
-    // Resposta:
+    // Resposta: Ele é uma forma de garantir que você está sobrescrevendo um método e não criando um novo
 }
